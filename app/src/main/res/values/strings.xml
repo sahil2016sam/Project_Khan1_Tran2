@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Project_Khan1_Tran2</string>
+    <string name="keepLogin">Keep me Logged in</string>
+    <string name="login">Login</string>
+    <string name="Username"> User Name</string>
+    <string name="Password"> Password</string>
 </resources>
