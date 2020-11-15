@@ -6,4 +6,91 @@
     android:layout_height="match_parent"
     tools:context=".NewRecordActivity">
 
+    <Button
+        android:id="@+id/backBTN"
+        android:layout_width="254dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="16dp"
+        android:text="Back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saveRecordBTN" />
+
+    <TextView
+        android:id="@+id/newRecordsTv"
+        android:layout_width="203dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="32dp"
+        android:text="New Record"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/scoreSeekBar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="304dp"
+        android:layout_height="89dp"
+        android:layout_marginTop="20dp"
+        android:max="10"
+        android:min="0"
+        android:progress="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <EditText
+        android:id="@+id/studentIdEDT"
+        android:layout_width="223dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="56dp"
+        android:ems="10"
+        android:hint="Student ID"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newRecordsTv" />
+
+    <Button
+        android:id="@+id/saveRecordBTN"
+        android:layout_width="254dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="32dp"
+        android:text="Save Record"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/commentsTV" />
+
+    <TextView
+        android:id="@+id/commentsTV"
+        android:layout_width="265dp"
+        android:layout_height="127dp"
+        android:layout_marginTop="28dp"
+        android:hint="Comments"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scoreSeekBar" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="116dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="44dp"
+        android:text="Score"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/studentIdEDT" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
