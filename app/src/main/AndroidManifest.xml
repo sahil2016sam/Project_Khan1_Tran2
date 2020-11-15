@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Project_Khan1_Tran2">
-        <activity android:name=".MainActivity">
+        <activity android:name=".ModifyRecordActivity"></activity>
+        <activity android:name=".AllRecordsActivity" />
+        <activity android:name=".NewRecordActivity" />
+        <activity android:name=".MainScreenActivity" />
+        <activity android:name=".LoginScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
