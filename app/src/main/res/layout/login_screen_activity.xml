@@ -75,12 +75,15 @@
         android:id="@+id/textView"
         android:layout_width="310dp"
         android:layout_height="88dp"
+        android:layout_marginTop="56dp"
         android:text="@string/partnerNames"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="50dp"
-        tools:layout_editor_absoluteY="481dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logInBTN" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
