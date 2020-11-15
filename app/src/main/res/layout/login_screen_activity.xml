@@ -7,59 +7,80 @@
     tools:context=".LoginScreenActivity">
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/passwordEDT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="53dp"
+        android:layout_marginTop="28dp"
         android:ems="10"
         android:hint="@string/Password"
         android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.348"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/userNameEDT" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/userNameEDT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="44dp"
         android:ems="10"
         android:hint="@string/Username"
         android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.348"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/loginTV" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/logInBTN"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="36dp"
         android:text="@string/login"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
+        app:layout_constraintTop_toBottomOf="@+id/loggedInChkBox" />
 
-    <RadioButton
-        android:id="@+id/radioButton2"
+    <TextView
+        android:id="@+id/loginTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="59dp"
-        android:text="@string/keepLogin"
+        android:layout_marginTop="68dp"
+        android:text="@string/login"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.198"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/loggedInChkBox"
+        android:layout_width="212dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="32dp"
+        android:text="Keep Me Logged In"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.351"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordEDT" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="66dp"
-        android:text="@string/login"
+        android:layout_width="310dp"
+        android:layout_height="88dp"
+        android:text="@string/partnerNames"
+        android:textAlignment="center"
         android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="481dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
