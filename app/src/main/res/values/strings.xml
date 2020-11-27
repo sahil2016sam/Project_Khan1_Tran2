@@ -5,4 +5,16 @@
     <string name="Username">User Name</string>
     <string name="Password">Password</string>
     <string name="partnerNames"> Kevin Tran and Ammar Khan</string>
+    <string name="Hi">Hi, </string>
+    <string name="select_option">Please select an Option</string>
+    <string name="new_record">Enter new Record</string>
+    <string name="previous_record">Display Previous Records</string>
+    <string name="Logout">Log Out</string>
+    <string name="submit">Submit</string>
+    <string name="edit_record">Edit Record</string>
+    <string name="student_id">Student Id:</string>
+    <string name="score">Score</string>
+    <string name="comment">Comment</string>
+    <string name="cancel">Cancel</string>
+    <string name="update">Update</string>
 </resources>
