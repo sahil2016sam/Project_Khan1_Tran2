@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginScreenActivity">
+    tools:context=".LoginScreenActivity"
+    android:usesCleartextTraffic="true">
+
 
     <EditText
         android:id="@+id/passwordEDT"
@@ -33,7 +35,7 @@
         app:layout_constraintTop_toBottomOf="@+id/loginTV" />
 
     <Button
-        android:id="@+id/logInBTN"
+        android:id="@+id/loginBTN"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
@@ -85,6 +87,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logInBTN" />
+        app:layout_constraintTop_toBottomOf="@+id/loginBTN" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
