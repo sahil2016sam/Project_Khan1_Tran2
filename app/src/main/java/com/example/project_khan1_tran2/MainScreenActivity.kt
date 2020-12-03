@@ -1,7 +1,10 @@
 package com.example.project_khan1_tran2
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import kotlinx.android.synthetic.main.main_screen_activity.*
 
 
 class MainScreenActivity : AppCompatActivity() {
@@ -10,6 +13,20 @@ class MainScreenActivity : AppCompatActivity() {
         setContentView(R.layout.main_screen_activity)
 
 
+    }
+
+    fun submitCLK(view: View) {
+        if (new_recordRBTN.isChecked){
+            val newRecordIntent = Intent(this, NewRecordActivity::class.java)
+            startActivity(newRecordIntent)
+        }
+        else if (prev_recordRBTN.isChecked){
+            val allRecordsIntent = Intent(this, AllRecordsActivity::class.java)
+            startActivity(allRecordsIntent)
+        }
+        else if (logoutRBTN.isChecked){
+            finish()
+        }
     }
 
 

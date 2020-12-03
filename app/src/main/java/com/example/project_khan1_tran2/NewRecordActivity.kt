@@ -3,6 +3,7 @@ package com.example.project_khan1_tran2
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.ArrayAdapter
 import androidx.lifecycle.ViewModelProvider
 import com.example.project_khan1_tran2.roomdatabase.MyViewModel
@@ -19,8 +20,8 @@ class NewRecordActivity : AppCompatActivity() {
         //implementation for room database
 
         saveRecordBTN.setOnClickListener{
-            val intent = Intent(this, AllRecordsActivity::class.java)
-            startActivity(intent)
+            val allRecordsIntent = Intent(this, AllRecordsActivity::class.java)
+            startActivity(allRecordsIntent)
         }
 
         //creating an instance for ViewModelProvider
@@ -46,11 +47,6 @@ class NewRecordActivity : AppCompatActivity() {
 
             })
         }
-
-
-
-
-
-
     }
+
 }
