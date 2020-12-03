@@ -28,11 +28,12 @@ class LoginScreenActivity : AppCompatActivity() {
                 "http://mohameom.dev.fast.sheridanc.on.ca/users/verifyUserData.php?name=${userNameEDT.text}&password=${passwordEDT.text}"
         if (name == "admin" && password == "admin") {
             Toast.makeText(this, "Login Successful!", Toast.LENGTH_SHORT).show()
-
+            mainIntent.putExtra("name", name)
             startActivity(mainIntent)
         }
         else if (name == "user" && password == "12345") {
             Toast.makeText(this, "Login Successful!", Toast.LENGTH_SHORT).show()
+            mainIntent.putExtra("name", name)
             startActivity(mainIntent)
         }
         else {
