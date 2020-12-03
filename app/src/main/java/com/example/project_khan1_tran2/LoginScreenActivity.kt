@@ -1,6 +1,7 @@
 package com.example.project_khan1_tran2
 
 import android.app.DownloadManager
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -21,6 +22,8 @@ class LoginScreenActivity : AppCompatActivity() {
     fun loginClick(view: View) {
         val url =
                 "http://mohameom.dev.fast.sheridanc.on.ca/users/verifyUserData.php?name=${userNameEDT.text}&password=${passwordEDT.text}"
+        val mainIntent = Intent(this, MainScreenActivity::class.java)
+        startActivity(mainIntent)
 
     }
 }
