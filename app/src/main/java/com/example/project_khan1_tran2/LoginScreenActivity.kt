@@ -9,6 +9,10 @@ import android.widget.Toast
 import kotlinx.android.synthetic.main.login_screen_activity.*
 
 class LoginScreenActivity : AppCompatActivity() {
+    var name = userNameEDT.text.toString()
+    var password = passwordEDT.text.toString()
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login_screen_activity)
@@ -18,26 +22,33 @@ class LoginScreenActivity : AppCompatActivity() {
         // test run 3
         // stop with this madness!
         ///ajaj
+
+
     }
 
     fun loginClick(view: View) {
-        var name = userNameEDT.text.toString()
-        var password = passwordEDT.text.toString()
-        val mainIntent = Intent(this, MainScreenActivity::class.java)
+
+
         val url =
                 "http://mohameom.dev.fast.sheridanc.on.ca/users/verifyUserData.php?name=${userNameEDT.text}&password=${passwordEDT.text}"
         if (name == "admin" && password == "admin") {
             Toast.makeText(this, "Login Successful!", Toast.LENGTH_SHORT).show()
 
-            startActivity(mainIntent)
+
+
         }
         else if (name == "user" && password == "12345") {
             Toast.makeText(this, "Login Successful!", Toast.LENGTH_SHORT).show()
-            startActivity(mainIntent)
+
+
         }
         else {
             Toast.makeText(this, "Login Unsuccessful!", Toast.LENGTH_SHORT).show()
         }
 
+
+
     }
+
+
 }
