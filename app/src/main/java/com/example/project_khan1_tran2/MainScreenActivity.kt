@@ -8,11 +8,12 @@ import kotlinx.android.synthetic.main.main_screen_activity.*
 
 
 class MainScreenActivity : AppCompatActivity() {
+    var newIntent:String = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_screen_activity)
-
-
+        newIntent = intent.getStringExtra("name")!!
+        greetUserTv.text = "Hi, $newIntent"
     }
 
     fun submitCLK(view: View) {
