@@ -12,6 +12,7 @@
         android:layout_height="47dp"
         android:layout_marginTop="16dp"
         android:text="Back"
+        android:onClick="goBack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,6 +50,7 @@
         android:layout_width="254dp"
         android:layout_height="47dp"
         android:layout_marginTop="32dp"
+        android:onClick="saveRecord"
         android:text="Save Record"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -87,10 +89,10 @@
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/studentScore" />
+        app:layout_constraintTop_toBottomOf="@+id/studentScoreSkTv" />
 
     <TextView
-        android:id="@+id/studentScore"
+        android:id="@+id/studentScoreSkTv"
         android:layout_width="88dp"
         android:layout_height="39dp"
         android:layout_marginTop="24dp"

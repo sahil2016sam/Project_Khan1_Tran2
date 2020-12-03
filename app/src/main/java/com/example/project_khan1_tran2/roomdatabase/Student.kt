@@ -8,7 +8,8 @@ import androidx.room.PrimaryKey
 data class Student(
 
     @PrimaryKey var id : Int,
-    @ColumnInfo(name = "student_score") var score: String,
+    @ColumnInfo(name = "student_score")
+    var score: String,
     var comments : String
     )
 {

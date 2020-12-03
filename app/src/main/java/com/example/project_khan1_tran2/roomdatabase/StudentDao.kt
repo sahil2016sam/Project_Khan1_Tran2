@@ -9,10 +9,10 @@ interface StudentDao {
     fun insertAll(vararg student: Student)
 
     @Query("SELECT * FROM student")
-    fun getAll() : List<Student>
+    fun getAll() : List<Student>?
 
     @Update
-    fun update(student: Student)
+    fun update(student: Student?)
 
     /*@Delete
     fun delete(student: Student)*/
