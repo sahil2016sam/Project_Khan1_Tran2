@@ -10,7 +10,7 @@ class MyAdapter(val data: ArrayList<Student>, var context: Context) : RecyclerVi
 {
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
     {
-
+///dsdssdssdsd
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder
