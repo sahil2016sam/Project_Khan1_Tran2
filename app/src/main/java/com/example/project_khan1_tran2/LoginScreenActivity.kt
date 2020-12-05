@@ -1,22 +1,22 @@
 package com.example.project_khan1_tran2
 
-import android.app.DownloadManager
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.project_khan1_tran2.roomdatabase.MyViewModel
 import kotlinx.android.synthetic.main.login_screen_activity.*
+import kotlin.concurrent.thread
 
 class LoginScreenActivity : AppCompatActivity() {
-    lateinit var vm : ViewModel
+    lateinit var vm : NetworkingViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login_screen_activity)
         vm = ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory.getInstance(application))
-                .get(ViewModel::class.java)
+                .get(NetworkingViewModel::class.java)
 
         //this is a test
         // test run 2
