@@ -18,11 +18,7 @@ class LoginScreenActivity : AppCompatActivity() {
         vm = ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory.getInstance(application))
                 .get(NetworkingViewModel::class.java)
 
-        //this is a test
-        // test run 2
-        // test run 3
-        // stop with this madness!
-        ///ajaj
+
     }
     fun getData( url : String){
 
