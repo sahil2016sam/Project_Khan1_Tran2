@@ -4,20 +4,14 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity
+@Entity(tableName = "studentinfo")
 data class Student(
+        @PrimaryKey(autoGenerate = true)
+        @ColumnInfo(name = "id") val id : Int = 0,
+        @ColumnInfo(name = "studentId") val studentId : String,
+        @ColumnInfo(name = "studentScore") val studentScore : String,
+        @ColumnInfo(name = "studentComments") val studentComments : String?
 
-    @PrimaryKey var id : Int,
-    @ColumnInfo(name = "student_score")
-    var score: String,
-    var comments : String
-    )
-{
-    //created a return to return the user data information with just the main values
-    override fun toString(): String
-    {
-        return "$id , $score , $comments"
-    }
+)
 
-}
 
