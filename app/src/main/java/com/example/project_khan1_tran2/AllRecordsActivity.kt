@@ -6,9 +6,6 @@ import androidx.lifecycle.ViewModelProvider
 
 class AllRecordsActivity : AppCompatActivity() {
 
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.all_records_activity)

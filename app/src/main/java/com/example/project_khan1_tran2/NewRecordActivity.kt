@@ -41,6 +41,7 @@ class NewRecordActivity : AppCompatActivity() {
 
         saveRecordBTN.setOnClickListener{
 
+
         }
 
     }
@@ -49,10 +50,10 @@ class NewRecordActivity : AppCompatActivity() {
 
     fun goToAllRecordsActivity()
     {
-        val intent = Intent(this, AllRecordsActivity::class.java)
+       /* val intent = Intent(this, AllRecordsActivity::class.java)
+        intent.putExtra("Student Id", studentIdEDTNewRec)
+        intent.putExtra("Student Score", studentScoreTvNewRec)
         intent.putExtra()
-        intent.putExtra()
-        intent.putExtra()
-        startActivity(intent)
+        startActivity(intent)*/
     }
 }
