@@ -7,14 +7,14 @@
 
     <TextView
         android:id="@+id/studentCommentsTvRv"
-        android:layout_width="146dp"
-        android:layout_height="34dp"
+        android:layout_width="115dp"
+        android:layout_height="33dp"
         android:layout_marginTop="16dp"
         android:hint="Student Comments"
         android:textColorHint="#5A5757"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.939"
+        app:layout_constraintHorizontal_bias="0.841"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -44,5 +44,14 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView android:id="@+id/deleteStudentRv"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="10dp"
+        android:src="@drawable/delete"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

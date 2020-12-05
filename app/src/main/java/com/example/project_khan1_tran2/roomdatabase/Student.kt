@@ -11,7 +11,6 @@ data class Student(
         @ColumnInfo(name = "studentId") val studentId : String,
         @ColumnInfo(name = "studentScore") val studentScore : String,
         @ColumnInfo(name = "studentComments") val studentComments : String?
-
 )
 
 

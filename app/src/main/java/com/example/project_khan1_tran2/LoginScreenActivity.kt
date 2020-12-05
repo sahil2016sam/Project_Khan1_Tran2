@@ -1,13 +1,11 @@
 package com.example.project_khan1_tran2
 
-import android.app.DownloadManager
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
-import com.example.project_khan1_tran2.roomdatabase.MyViewModel
 import kotlinx.android.synthetic.main.login_screen_activity.*
 
 class LoginScreenActivity : AppCompatActivity() {

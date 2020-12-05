@@ -4,53 +4,55 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
+import android.widget.SeekBar
+import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
-import com.example.project_khan1_tran2.roomdatabase.MyViewModel
 import kotlinx.android.synthetic.main.all_records_activity.*
 import kotlinx.android.synthetic.main.new_record_activity.*
 
 class NewRecordActivity : AppCompatActivity() {
 
-    var vm : MyViewModel? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.new_record_activity)
-        //implementation for room database
+
+        //implementation for the score seekbar
+        scoreSeekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            var studentScore = 0
+            override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
+                studentScore = progress
+            }
+
+            override fun onStartTrackingTouch(seekBar: SeekBar) {
+
+            }
+
+            override fun onStopTrackingTouch(seekBar: SeekBar) {
+
+                studentScoreTvNewRec.text = "$studentScore"
+
+                Toast.makeText(
+                        this@NewRecordActivity, "Seek bar progress is :$studentScore",
+                        Toast.LENGTH_SHORT
+                ).show()
+            }
+        })
 
         saveRecordBTN.setOnClickListener{
-            val intent = Intent(this, AllRecordsActivity::class.java)
-            startActivity(intent)
+
         }
 
-        //creating an instance for ViewModelProvider
-        vm = ViewModelProvider(this, ViewModelProvider
-            .AndroidViewModelFactory
-            .getInstance(this.getApplication()))
-            .get(MyViewModel::class.java)
-
-        if (vm != null)
-        {
-            // will return the users
-            vm?.students?.observe(this, {
-
-                //creating a variable to store data in the Array adapter
-                var adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, it)
-
-                //displaying data in the list view in the second activity from the data stored in the array adapter
-               // listView.adapter = adapter
-
-               // recyclerView.adapter = adapter
+    }
 
 
 
-            })
-        }
-
-
-
-
-
-
+    fun goToAllRecordsActivity()
+    {
+        val intent = Intent(this, AllRecordsActivity::class.java)
+        intent.putExtra()
+        intent.putExtra()
+        intent.putExtra()
+        startActivity(intent)
     }
 }

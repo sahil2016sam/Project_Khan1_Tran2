@@ -32,7 +32,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/studentIdEDT"
+        android:id="@+id/studentIdEDTNewRec"
         android:layout_width="223dp"
         android:layout_height="46dp"
         android:layout_marginTop="56dp"
@@ -52,10 +52,10 @@
         android:text="Save Record"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/commentsTV" />
+        app:layout_constraintTop_toBottomOf="@+id/commentsTVNewRec" />
 
     <TextView
-        android:id="@+id/commentsTV"
+        android:id="@+id/commentsTVNewRec"
         android:layout_width="265dp"
         android:layout_height="127dp"
         android:layout_marginTop="40dp"
@@ -78,7 +78,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/studentIdEDT" />
+        app:layout_constraintTop_toBottomOf="@+id/studentIdEDTNewRec" />
 
     <SeekBar
         android:id="@+id/scoreSeekBar"
@@ -87,10 +87,10 @@
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/studentScore" />
+        app:layout_constraintTop_toBottomOf="@+id/studentScoreTvNewRec" />
 
     <TextView
-        android:id="@+id/studentScore"
+        android:id="@+id/studentScoreTvNewRec"
         android:layout_width="88dp"
         android:layout_height="39dp"
         android:layout_marginTop="24dp"

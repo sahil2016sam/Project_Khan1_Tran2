@@ -16,7 +16,20 @@ abstract class MyDatabase : RoomDatabase()
     companion object
     {
 
+        private var INSTANCE: MyDatabase? = null
 
+        fun getAppDatabase(context: Context): MyDatabase?
+        {
+            if (INSTANCE == null)
+            {
+                INSTANCE = Room.databaseBuilder<MyDatabase>(
+                        context.applicationContext, MyDatabase::class.java, "MyDB"
+                )
+                        .allowMainThreadQueries()
+                        .build()
 
+            }
+            return INSTANCE
+        }
     }
 }
