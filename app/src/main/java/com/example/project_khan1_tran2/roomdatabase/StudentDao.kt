@@ -5,9 +5,8 @@ import androidx.room.*
 @Dao
 interface StudentDao {
 
-    @Query("SELECT * FROM studentinfo ORDER BY id DESC")
+    @Query("SELECT * FROM studentinfo ORDER BY studentId ASC")
     fun getAllStudentInfo(): List<Student>?
-
 
     @Insert
     fun insertStudent(student: Student?)
@@ -18,3 +17,4 @@ interface StudentDao {
     @Update
     fun updateStudent(student: Student?)
 }
+

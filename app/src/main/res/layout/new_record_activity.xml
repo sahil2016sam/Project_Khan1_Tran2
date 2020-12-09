@@ -48,22 +48,12 @@
         android:id="@+id/saveRecordBTN"
         android:layout_width="254dp"
         android:layout_height="47dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:text="Save Record"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/commentsTVNewRec" />
-
-    <TextView
-        android:id="@+id/commentsTVNewRec"
-        android:layout_width="265dp"
-        android:layout_height="127dp"
-        android:layout_marginTop="40dp"
-        android:hint="Comments"
-        android:textColor="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scoreSeekBar" />
+        app:layout_constraintTop_toBottomOf="@+id/commentsEDTNewRec" />
 
     <TextView
         android:id="@+id/textView5"
@@ -85,6 +75,8 @@
         android:layout_width="301dp"
         android:layout_height="32dp"
         android:layout_marginTop="16dp"
+        android:max="10"
+        android:min="0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/studentScoreTvNewRec" />
@@ -98,5 +90,17 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <EditText
+        android:id="@+id/commentsEDTNewRec"
+        android:layout_width="241dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Comments"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scoreSeekBar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

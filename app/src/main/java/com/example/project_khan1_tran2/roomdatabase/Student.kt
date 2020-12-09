@@ -3,6 +3,7 @@ package com.example.project_khan1_tran2.roomdatabase
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.io.Serializable
 
 @Entity(tableName = "studentinfo")
 data class Student(

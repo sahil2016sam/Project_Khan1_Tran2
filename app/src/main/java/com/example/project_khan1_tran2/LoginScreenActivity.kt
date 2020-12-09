@@ -33,11 +33,12 @@ class LoginScreenActivity : AppCompatActivity() {
         getData(url)
         if (name == "admin" && password == "admin") {
             Toast.makeText(this, "Login Successful!", Toast.LENGTH_SHORT).show()
-
+            mainIntent.putExtra("name", name)
             startActivity(mainIntent)
         }
         else if (name == "user" && password == "12345") {
             Toast.makeText(this, "Login Successful!", Toast.LENGTH_SHORT).show()
+            mainIntent.putExtra("name", name)
             startActivity(mainIntent)
         }
         else {

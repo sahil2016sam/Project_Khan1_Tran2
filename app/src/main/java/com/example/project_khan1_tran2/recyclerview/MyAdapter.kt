@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.project_khan1_tran2.R
 import com.example.project_khan1_tran2.roomdatabase.Student
-import kotlinx.android.synthetic.main.new_record_activity.view.*
 import kotlinx.android.synthetic.main.row.view.*
 
 class MyAdapter(val listener: RowClickListener): RecyclerView.Adapter<MyAdapter.MyViewHolder>()
@@ -46,7 +45,7 @@ class MyAdapter(val listener: RowClickListener): RecyclerView.Adapter<MyAdapter.
     {
         val studentIDTvRv = view.studentIDTvRv
         val studentScoreTvRv = view.studentScoreTvRv
-        val studentCommentsTvRv = view.studentCommentsTvRv
+        val studentCommentsEdtRv = view.studentCommentsTvRv
         val deleteStudent = view.deleteStudentRv
 
         fun bind(data: Student)
@@ -55,7 +54,7 @@ class MyAdapter(val listener: RowClickListener): RecyclerView.Adapter<MyAdapter.
 
             studentScoreTvRv.text = data.studentScore
 
-            studentCommentsTvRv.text = data.studentComments
+            studentCommentsEdtRv.text = data.studentComments
 
             deleteStudent.setOnClickListener {
                 listener.onDeleteStudentClickListener(data)
@@ -64,7 +63,10 @@ class MyAdapter(val listener: RowClickListener): RecyclerView.Adapter<MyAdapter.
     }
 
     interface RowClickListener{
+
         fun onDeleteStudentClickListener(student: Student)
         fun onItemClickListener(student: Student)
+
     }
 }
+
