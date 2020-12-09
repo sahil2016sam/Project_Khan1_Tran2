@@ -3,11 +3,14 @@ package com.example.project_khan1_tran2
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.example.project_khan1_tran2.roomdatabase.User
 import kotlinx.android.synthetic.main.login_screen_activity.*
+import org.json.JSONObject
 import kotlin.concurrent.thread
 
 class LoginScreenActivity : AppCompatActivity() {
@@ -18,25 +21,40 @@ class LoginScreenActivity : AppCompatActivity() {
         vm = ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory.getInstance(application))
                 .get(NetworkingViewModel::class.java)
 
-
+        if(vm != null){
+            vm.user.observe(this,{
+                userNameEDT.setText(it.name)
+                passwordEDT.setText(it.password)
+            })
+        }
     }
     fun getData( url : String){
 
         vm.makeRequest(url)
 
     }
+
     fun loginClick(view: View) {
         var name = userNameEDT.text.toString()
         var password = passwordEDT.text.toString()
         val mainIntent = Intent(this, MainScreenActivity::class.java)
-        val url:String = "http://mohameom.dev.fast.sheridanc.on.ca/users/verifyUserData.php?name=${userNameEDT.text}&password=${passwordEDT.text}"
+        val url:String = "https://mohameom.dev.fast.sheridanc.on.ca/login/verify.php?name=${name}&password=${password}"
         getData(url)
-        if (name == "admin" && password == "admin") {
-            Toast.makeText(this, "Login Successful!", Toast.LENGTH_SHORT).show()
-            mainIntent.putExtra("name", name)
-            startActivity(mainIntent)
-        }
-        else if (name == "user" && password == "12345") {
+
+        var jsonObject = JSONObject()
+
+       var usernameJson = jsonObject.put("name", userNameEDT.text.toString())
+        var passwordJson = jsonObject.put("password", passwordEDT.text.toString())
+        jsonObject.put("password", "12345")
+        jsonObject.put("password", "admin")
+
+        Log.d("JSON", jsonObject.toString())
+        Log.d("name", jsonObject.optString("name"))
+        //var checkValid = vm.getJson()
+        var loginValid = """{"login": "valid"}"""
+
+
+        if ("""{"login": "valid"}""" == loginValid) {
             Toast.makeText(this, "Login Successful!", Toast.LENGTH_SHORT).show()
             mainIntent.putExtra("name", name)
             startActivity(mainIntent)

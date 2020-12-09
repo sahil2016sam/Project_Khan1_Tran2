@@ -15,7 +15,10 @@ class MainScreenActivity : AppCompatActivity() {
         setContentView(R.layout.main_screen_activity)
         newIntent = intent.getStringExtra("name")!!
         greetUserTv.text = "Hi, $newIntent"
+
+
     }
+
 
     fun submitCLK(view: View) {
         if (new_recordRBTN.isChecked)
