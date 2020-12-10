@@ -40,23 +40,28 @@ class NetworkingViewModel(app: Application) : AndroidViewModel(app) {
             var json = JSONObject(result)
             var name = json.optString("name")
             var password = json.optString("password")
-            Log.d("result", result)
+            Log.d("resulteesses", result)
         }catch (e: Exception){
             Log.d("TAG", e.toString())
         }
         return result
     }
     fun makeRequest(url:String){
+
         CoroutineScope(Dispatchers.IO).launch {
-             result = loadData(url)
+            result = loadData(url)
+
 
             withContext(Dispatchers.Main){
-               var json = getJson(result)
+                Log.d("starting brap", result)
+                this@NetworkingViewModel.username.value = result
+              /* var json = getJson(result)
                 var name = json.optString("name")
                 var password = json.optString("password")
+
                 this@NetworkingViewModel.username.value = name
                 this@NetworkingViewModel.user.value = User(name, password)
-                Toast.makeText(getApplication(), name, Toast.LENGTH_SHORT).show()
+                Toast.makeText(getApplication(), name, Toast.LENGTH_SHORT).show()*/
             }
         }
 

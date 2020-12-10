@@ -12,6 +12,7 @@ import com.example.project_khan1_tran2.roomdatabase.User
 import kotlinx.android.synthetic.main.login_screen_activity.*
 import org.json.JSONObject
 import kotlin.concurrent.thread
+import kotlin.math.log
 
 class LoginScreenActivity : AppCompatActivity() {
     lateinit var vm : NetworkingViewModel
@@ -43,8 +44,8 @@ class LoginScreenActivity : AppCompatActivity() {
 
         var jsonObject = JSONObject()
 
-       var usernameJson = jsonObject.put("name", userNameEDT.text.toString())
-        var passwordJson = jsonObject.put("password", passwordEDT.text.toString())
+       var usernameJson = jsonObject.put("name", name)
+        var passwordJson = jsonObject.put("password", password)
         jsonObject.put("password", "12345")
         jsonObject.put("password", "admin")
 
@@ -52,16 +53,19 @@ class LoginScreenActivity : AppCompatActivity() {
         Log.d("name", jsonObject.optString("name"))
         //var checkValid = vm.getJson()
         var loginValid = """{"login": "valid"}"""
+        vm.username.observe(this,{
+            Log.d("brap3", it)
 
+            if (loginValid == it) {
+                Toast.makeText(this, "Login Successful!", Toast.LENGTH_SHORT).show()
+                mainIntent.putExtra("name", name)
+                startActivity(mainIntent)
+            }
+            else {
+                Toast.makeText(this, "Login Unsuccessful!", Toast.LENGTH_SHORT).show()
+            }
+        })
 
-        if ("""{"login": "valid"}""" == loginValid) {
-            Toast.makeText(this, "Login Successful!", Toast.LENGTH_SHORT).show()
-            mainIntent.putExtra("name", name)
-            startActivity(mainIntent)
-        }
-        else {
-            Toast.makeText(this, "Login Unsuccessful!", Toast.LENGTH_SHORT).show()
-        }
 
     }
 }
