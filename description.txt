@@ -1,0 +1,1 @@
+This is a project on android studios using gradle featuring server login, drop down menus and etc.
